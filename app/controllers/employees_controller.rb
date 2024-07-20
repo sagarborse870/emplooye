@@ -20,12 +20,13 @@ class EmployeesController < ApplicationController
     @employee = Employee.find(params[:id])
   end
 
-  def updated
+  def update
     @employee = Employee.find(params[:id])
     if @employee.update(employee_params)
       redirect_to employee_path
     else
-      redirect_to edit_employee_path(@employee)
+      puts @employee.errors
+      redirect_to :edit
     end
   end
 
