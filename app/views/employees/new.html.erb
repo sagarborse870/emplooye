@@ -11,11 +11,19 @@
 			</div>
 		<% end %>
 	</div>
+	<%# <form action="/action_page.php">
+		<label for="fname">First name:</label><br>
+		<input type="text" id="fname" name="fname" value="John"><br>
+		<label for="lname">Last name:</label><br>
+		<input type="text" id="lname" name="lname" value="Doe"><br>
+		<br>
+		<input type="submit" value="Submit">
+	</form> %>
 	<%= form_with model: @employee do |form| %>
 		<div class="row">
 			<div class="col-lg-4">
 				<div class="form-group">
-					<%= form.label :fname, class: 'mb-5 mt-5'%>
+					<%= form.label :fname, class: 'mb-10 mt-10'%>
 					<%= form.text_field :fname, class: 'form-control form-control-lg' %>
 				</div>
 			</div>
@@ -23,7 +31,7 @@
 		<div clas="row">
 			<div class="col-lg-5">
 				<div class="form-group">
-					<%= form.label :lname, class: 'mb-5 mt-5'%>
+					<%= form.label :lname, class: 'mb-10 mt-10'%>
 					<%= form.text_field :lname, class: 'form-control form-control-lg' %>
 				</div>
 			</div>
